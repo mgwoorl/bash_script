@@ -19,7 +19,7 @@ if [ -f "$parent_dir/$filename" ]; then
     read answer
 
     if [ "$answer" = "да" ]; then
-        
+        rm "$parent_dir/$filename"        
         echo "Файл $filename был удален из директории $parent_dir"
 
     elif [ "$answer" = "нет" ]; then
