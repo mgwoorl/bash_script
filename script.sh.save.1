@@ -7,13 +7,11 @@ read filename
 
 if [ -f "$parent_dir/$filename" ]; then
     echo "Файл $filename в директории $parent_dir существует."
- 
-    if [ -s "$parent_dir/$filename" ]; then
-	echo "Выводим первые 10 строк файла:"
-        head "$parent_dir/$filename"
-    else
-        echo "Файл $filename пустой"
-    fi
+    if [ -s file.tx ]
+then
+echo "File is empty" 
+"Выводим первые 10 строк файла:"
+    head "$parent_dir/$filename"
 
     echo "Хотите удалить файл? (да/нет)"
     read answer
