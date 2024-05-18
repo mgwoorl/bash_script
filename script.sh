@@ -6,7 +6,7 @@ echo "Введите имя файла:"
 read filename
 
 if [ -f "$parent_dir/$filename" ]; then
-    echo "Файл $filename существует. Выводим первые 10 строк файла:"
+    echo "Файл $filename в директории $parent_dir существует. Выводим первые 10 строк файла:"
     head "$parent_dir/$filename"
 
     echo "Хотите удалить файл? (да/нет)"
@@ -14,7 +14,7 @@ if [ -f "$parent_dir/$filename" ]; then
 
     if [ "$answer" = "да" ]; then
         
-        echo "Файл $filename был удален"
+        echo "Файл $filename был удален из директории $parent_dir"
 
     elif [ "$answer" = "нет" ]; then
         echo "Файл не был удален"
@@ -22,4 +22,7 @@ if [ -f "$parent_dir/$filename" ]; then
     else
         echo "Команда не распознана"
     fi
+
+else
+    echo "Файла с названием $filename не существует в директории $parent_dir"
 fi
